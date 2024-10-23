@@ -1,113 +1,106 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Mole Day Colors */
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #6B4226; /* Earthy brown background */
-    color: #F0E6D6; /* Light text */
-    padding-top: 70px; /* Space for navbar */
-    background-image: url('images/grass.png'); /* Path to your grass image */
-    background-position: bottom; /* Position at the bottom */
-    background-repeat: repeat-x; /* Repeat horizontally */
-    background-attachment: fixed; /* Make it follow as you scroll */
-  }
-  
-  /* Transparent and Blurry Navbar Styling */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: rgba(76, 42, 23, 0.5); /* Semi-transparent with 50% opacity */
-    backdrop-filter: blur(10px); /* Slight blur effect */
-    color: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  .logo img {
-    width: 80px; /* Mole-themed logo */
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links li {
-    display: inline;
-  }
-  
-  .nav-links a {
-    color: #F0E6D6;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    background-color: #7B5A36; /* Button color - dirt tone */
-    border-radius: 5px;
-  }
-  
-  .nav-links a:hover {
-    background-color: #AD8652; /* Lighter brown on hover */
-  }
-  
-  /* Main Content Styling */
-  .content {
-    text-align: center;
-    padding: 50px 20px;
-  }
-  
-  .content h1 {
-    font-size: 48px;
-    color: #F0E6D6;
-    margin-bottom: 20px;
-  }
-  
-  .content p {
-    font-size: 24px;
-    line-height: 1.6;
-  }
-  
-  /* Big Image Styling */
-  .big-image {
-    width: 100%; /* Full width */
-    max-width: 600px; /* Limit max width */
-    height: auto; /* Maintain aspect ratio */
-    margin: 20px auto; /* Center the image */
-    display: block;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Soft shadow */
-  }
-  
-  /* Mobile View */
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .nav-links {
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    .nav-links li {
-      text-align: left;
-      width: 100%;
-    }
-  
-    .nav-links a {
-      display: block;
-      width: 100%;
-    }
-  }
-  
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #F0E6D6; 
+  background-color: #4C2A17;
+}
+
+body:after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px; 
+  background-image: url('grass.png'); 
+  background-repeat: repeat-x; 
+  background-size: contain; 
+  z-index: 1; 
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(76, 42, 23, 0.8); 
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 50px; 
+}
+
+.content {
+  padding: 100px 20px; 
+  position: relative; 
+  z-index: 2; 
+  text-align: center; 
+}
+
+h1 {
+  text-align: center; 
+  font-size: 2.5em; 
+}
+
+.big-image {
+  width: 100%; 
+  max-width: 600px; 
+  display: block; 
+  margin: 20px auto; 
+}
+
+
+.game-button {
+  background-color: #7B5A36; 
+  color: #F0E6D6;
+  border: none;
+  padding: 15px 30px; 
+  font-size: 20px; 
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block; 
+  margin-top: 20px; 
+}
+
+.game-button:hover {
+  background-color: #AD8652; 
+}
+
+.content p {
+  background-color: rgba(76, 42, 23, 0.7); 
+  padding: 10px;
+  border-radius: 5px; 
+}
+
+.iframe-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  margin: 20px 0; 
+}
+
+iframe {
+  width: 80%; 
+  height: 90%; 
+  border: none; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+.sun-image {
+  position: fixed; 
+  top: 20px; 
+  right: 20px; 
+  width: 150px; 
+  height: auto; 
+  z-index: 3; 
+}
